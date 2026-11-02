@@ -126,6 +126,7 @@
   function put(el, s, k, v) { if (s.out[k] !== v) { s.out[k] = v; el.style.setProperty(k, v); } }
 
   /* створка героя: куда и насколько вырасти, чтобы закрыть экран (считается при смене ширины) */
+  var heroTxt = doc.querySelector(".hero-txt");
   function measureHero() {
     if (!heroSash || !hero || MOB()) return;
     root.classList.add("measuring");
@@ -134,9 +135,13 @@
     if (!sr.width || !sr.height) return;
     var cx = sr.left - pr.left + sr.width / 2, cy = sr.top - pr.top + sr.height / 2;
     var fr = parseFloat(getComputedStyle(root).getPropertyValue("--frame")) || 12;
-    /* растём так, чтобы экран закрыл сам кадр, а рама ушла за края */
-    var sc = Math.max(VW / (sr.width - 2 * fr), VH / (sr.height - 2 * fr)) * 1.04;
-    heroSash.style.setProperty("--tx", (VW / 2 - cx).toFixed(1) + "px");
+    /* растём в правую часть экрана до краёв, колонку текста не закрываем */
+    var tr = heroTxt ? heroTxt.getBoundingClientRect() : null;
+    var L = tr ? tr.right - pr.left + 48 : VW / 2;
+    var TW = VW - L;
+    var sc = Math.max(TW / (sr.width - 2 * fr), VH / (sr.height - 2 * fr)) * 1.03;
+    /* левый край рамы встаёт на границу текста, лишняя ширина уходит за правый край экрана */
+    heroSash.style.setProperty("--tx", (L + sr.width * sc / 2 - cx).toFixed(1) + "px");
     heroSash.style.setProperty("--ty", (VH / 2 - cy).toFixed(1) + "px");
     heroSash.style.setProperty("--sc", sc.toFixed(3));
   }
@@ -195,12 +200,7 @@
     if (INTRO < 1) requestAnimationFrame(runIntro);
   }
 
-  /* ---------- Бегущая лента: копии, шаг цикла - одна копия ---------- */
-  [].forEach.call(doc.querySelectorAll(".ribbon-track"), function (tr) {
-    var n = tr.children.length;
-    for (var k = 0; k < n; k++) tr.appendChild(tr.children[k].cloneNode(true));
-  });
-
+  
   /* ---------- Язык: RU в разметке, KZ подгружается отдельным файлом ---------- */
   var I18N = { ru: {} };
   var RU = I18N.ru;

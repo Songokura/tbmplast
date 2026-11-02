@@ -30,9 +30,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&family=Golos+Text:wght@400;500;600&display=swap">
-<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 901px)">
-<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 900px)">
-<link rel="stylesheet" href="styles.css?v=20261021-2">
+<link rel="preload" as="image" href="assets/hero.webp?v=20261102-1" media="(min-width: 901px)">
+<link rel="preload" as="image" href="assets/hero-m.webp?v=20261102-2" media="(max-width: 900px)">
+<link rel="stylesheet" href="styles.css?v=20261102-4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,12 +120,11 @@
 <div class="pw pw-hero" id="top">
   <section class="plate hero" aria-labelledby="h1">
     <div class="hero-bg" aria-hidden="true">
-      <div class="hero-glow"></div>
       <svg class="bg-win" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/><rect x="104" y="86" width="6" height="30" rx="3" fill="currentColor"/></svg>
     </div>
     <div class="hero-in">
       <div class="hero-txt txt">
-        <p class="kicker" data-i="hero.k">Астана и пригород · выезд мастера · с 2008 года</p>
+        <p class="kicker" data-i="hero.k">Астана · выезд мастера · с 2008 года</p>
         <h1 id="h1"><span class="small" data-i="hero.h1a">Ремонт пластиковых</span> <span class="big" data-i="hero.h1b">окон и дверей</span></h1>
         <p class="lead"><span class="d-only" data-i="hero.lead1">Регулировка, уплотнители, стеклопакеты, москитные сетки, откосы. </span><span data-i="hero.lead2">Мастер приедет, осмотрит и рассчитает на месте. 18&nbsp;лет опыта, гарантия 1&nbsp;год, без выходных.</span></p>
         <div class="btn-row">
@@ -138,37 +137,31 @@
           <span class="sash-edge" aria-hidden="true"></span>
           <figure class="ph has-img">
             <picture>
-              <source media="(max-width: 900px)" srcset="assets/hero-m.webp">
-              <img src="assets/hero.webp" alt="Окно квартиры в Астане, в которое льётся тёплый вечерний свет" data-i-alt="alt.hero" width="1600" height="1067" fetchpriority="high" decoding="async">
+              <source media="(max-width: 900px)" srcset="assets/hero-m.webp?v=20261102-2">
+              <img src="assets/hero.webp?v=20261102-1" alt="Мастер регулирует створку белого окна в светлой квартире" data-i-alt="alt.hero" width="2400" height="1599" fetchpriority="high" decoding="async">
             </picture>
-            <div class="stub"><span data-i="stub.l">Фото</span><strong data-i="stub.hero">Окно после ремонта</strong></div>
           </figure>
           <span class="handle" aria-hidden="true"><svg viewBox="0 0 34 92"><rect x="4" y="30" width="26" height="32" rx="6" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/><g class="lever"><rect x="11.5" y="42" width="11" height="48" rx="5.5" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/></g><circle cx="17" cy="46" r="3.2" fill="#C9CBC4"/></svg></span>
         </div>
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
     </div>
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon-track">
-        <a href="#regulirovka" tabindex="-1" data-i="rb.1">Регулировка окон и дверей</a>
-        <a href="#uplotniteli" tabindex="-1" data-i="rb.2">Замена уплотнителей</a>
-        <a href="#steklopakety" tabindex="-1" data-i="rb.3">Замена стеклопакетов</a>
-        <a href="#moskitnye-setki" tabindex="-1" data-i="rb.4">Москитные сетки</a>
-        <a href="#germetizaciya" tabindex="-1" data-i="rb.5">Герметизация швов</a>
-        <a href="#otkosy" tabindex="-1" data-i="rb.6">Откосы и подоконники</a>
-        <a href="#furnitura" tabindex="-1" data-i="rb.7">Ремонт фурнитуры</a>
-      </div>
+    <div class="ribbon">
+      <ul class="ribbon-track">
+        <li data-i="rb.f1">18&nbsp;лет ремонтируем окна</li>
+        <li data-i="rb.f2">Гарантия 1&nbsp;год</li>
+        <li data-i="rb.f3">Без выходных</li>
+        <li data-i="rb.f4">Выезд по Астане и пригороду</li>
+      </ul>
     </div>
   </section>
 </div>
 
 <!-- Что с окном: симптом -> услуга -->
 <section class="sec" id="problemy" aria-labelledby="h-pr">
-  <svg class="bg-win l" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="kicker" data-i="pr.k">Что с окном</p>
-      <h2 id="h-pr" data-i="pr.h">Узнали свою проблему? Мы знаем, что с этим делать</h2>
+      <h2 id="h-pr" data-i="pr.h">Что случилось с окном?</h2>
       <p class="lead" data-i="pr.l">Нажмите на то, что похоже на ваш случай, или просто отправьте фото окна в WhatsApp.</p>
     </div>
     <div class="sym-grid rv">
@@ -203,17 +196,22 @@
         <span class="sym-to"><span data-i="sym.6t">Герметизация швов и откосы</span><svg aria-hidden="true"><use href="#ic-arr"/></svg></span>
       </a>
     </div>
+    <ul class="trust rv">
+      <li data-i="tr.1">Работаем с&nbsp;2008 года</li>
+      <li data-i="tr.2">Гарантия 1&nbsp;год на&nbsp;работу</li>
+      <li data-i="tr.3">Цену называем до&nbsp;начала работ</li>
+      <li data-i="tr.4">Выезд без выходных</li>
+    </ul>
   </div>
 </section>
 
 <!-- Плита: регулировка -->
 <div class="pw" id="regulirovka">
   <section class="plate svc light" aria-labelledby="h-reg">
-    <svg class="bg-win l" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
     <div class="svc-in">
       <div class="svc-txt txt">
         <p class="kicker" data-i="reg.k">Регулировка окон и дверей</p>
-        <h2 id="h-reg" data-i="reg.h">Створка снова закрывается легко и держит тепло</h2>
+        <h2 id="h-reg" data-i="reg.h">Створка снова закрывается легко и&nbsp;держит тепло</h2>
         <p class="lead svc-lead" data-i="reg.l">Выставляем створку по петлям, настраиваем прижим цапфами на зиму и лето. Ручка ходит мягко, окно не дует и не цепляет раму.</p>
         <ul class="svc-list">
           <li data-i="reg.1">Провисание и перекос створки</li>
@@ -229,10 +227,9 @@
         <div class="sash">
           <div class="sash-3d">
             <span class="sash-edge" aria-hidden="true"></span>
-            <figure class="ph">
-              <div class="stub"><span data-i="stub.l">Фото объекта</span><strong data-i="stub.reg">Мастер регулирует створку</strong></div>
+            <figure class="ph has-img">
+              <img src="assets/regulirovka.webp?v=20261102-2" alt="Рука мастера с шуруповёртом у петли створки" data-i-alt="alt.reg" width="1600" height="1200" loading="lazy" decoding="async">
             </figure>
-            <span class="handle" aria-hidden="true"><svg viewBox="0 0 34 92"><rect x="4" y="30" width="26" height="32" rx="6" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/><g class="lever"><rect x="11.5" y="42" width="11" height="48" rx="5.5" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/></g><circle cx="17" cy="46" r="3.2" fill="#C9CBC4"/></svg></span>
           </div>
         </div>
       </div>
@@ -243,11 +240,10 @@
 <!-- Плита: уплотнители -->
 <div class="pw" id="uplotniteli">
   <section class="plate svc dark" aria-labelledby="h-upl">
-    <svg class="bg-win" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
     <div class="svc-in rev">
       <div class="svc-txt txt">
         <p class="kicker" data-i="upl.k">Замена уплотнителей</p>
-        <h2 id="h-upl" data-i="upl.h">Новый контур по всему периметру: тише и теплее</h2>
+        <h2 id="h-upl" data-i="upl.h">Новый контур по&nbsp;всему периметру: тише и&nbsp;теплее</h2>
         <p class="lead svc-lead" data-i="upl.l">Старая резина дубеет и трескается, из окна тянет холодом. Снимаем изношенный уплотнитель, ставим новый на створку и раму.</p>
         <ul class="svc-list">
           <li data-i="upl.1">Сквозняк и холод у окна зимой</li>
@@ -264,10 +260,8 @@
           <div class="sash-3d">
             <span class="sash-edge" aria-hidden="true"></span>
             <figure class="ph has-img">
-              <img src="assets/uplotniteli.webp" alt="Тёплая комната и окно, за которым осень: герметичное окно держит тепло" data-i-alt="alt.upl" width="1200" height="800" loading="lazy" decoding="async">
-              <div class="stub"><span data-i="stub.l">Фото объекта</span><strong data-i="stub.upl">Замена уплотнителя</strong></div>
+              <img src="assets/uplotniteli.webp?v=20261102-1" alt="Мастер прижимает створку к раме по контуру уплотнителя" data-i-alt="alt.upl" width="1600" height="1199" loading="lazy" decoding="async">
             </figure>
-            <span class="handle" aria-hidden="true"><svg viewBox="0 0 34 92"><rect x="4" y="30" width="26" height="32" rx="6" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/><g class="lever"><rect x="11.5" y="42" width="11" height="48" rx="5.5" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/></g><circle cx="17" cy="46" r="3.2" fill="#C9CBC4"/></svg></span>
           </div>
         </div>
       </div>
@@ -278,20 +272,13 @@
 <!-- Плита: стеклопакеты -->
 <div class="pw" id="steklopakety">
   <section class="plate svc light" aria-labelledby="h-stp">
-    <svg class="bg-win l" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
     <div class="svc-in">
       <div class="svc-txt txt">
         <p class="kicker" data-i="stp.k">Замена стеклопакетов</p>
-        <h2 id="h-stp" data-i="stp.h">Меняем стеклопакет, а не всё окно</h2>
+        <h2 id="h-stp" data-i="stp.h">Меняем стеклопакет, а&nbsp;не&nbsp;всё окно</h2>
         <p class="lead svc-lead" data-i="stp.l">Запотевание между стёклами, трещина, разгерметизация. Замеряем на месте, изготавливаем по размеру и ставим в ту же раму.</p>
-        <ul class="svc-list">
-          <li data-i="stp.1">Трещины и сколы стекла</li>
-          <li data-i="stp.2">Конденсат внутри стеклопакета</li>
-          <li data-i="stp.3">Однокамерные и двухкамерные</li>
-        </ul>
         <div class="svc-cta">
           <a class="btn btn-amber" href="https://wa.me/77004040187" data-wa="steklopakety" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo">Отправить фото окна</span></a>
-          <a class="btn btn-ghost" href="tel:+77004040187"><svg width="18" height="18" aria-hidden="true"><use href="#ic-tel"/></svg><span data-i="btn.call">Позвонить</span></a>
         </div>
       </div>
       <div class="svc-ph">
@@ -299,10 +286,8 @@
           <div class="sash-3d">
             <span class="sash-edge" aria-hidden="true"></span>
             <figure class="ph has-img">
-              <img src="assets/steklopakety.webp" alt="Запотевшее стекло окна с каплями конденсата" data-i-alt="alt.stp" width="1200" height="900" loading="lazy" decoding="async">
-              <div class="stub"><span data-i="stub.l">Фото объекта</span><strong data-i="stub.stp">Замена стеклопакета</strong></div>
+              <img src="assets/steklopakety.webp?v=20261102-1" alt="Мастер замеряет проём створки рулеткой" data-i-alt="alt.stp" width="1600" height="1200" loading="lazy" decoding="async">
             </figure>
-            <span class="handle" aria-hidden="true"><svg viewBox="0 0 34 92"><rect x="4" y="30" width="26" height="32" rx="6" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/><g class="lever"><rect x="11.5" y="42" width="11" height="48" rx="5.5" fill="#F4F3EE" stroke="#B9BBB4" stroke-width="1.5"/></g><circle cx="17" cy="46" r="3.2" fill="#C9CBC4"/></svg></span>
           </div>
         </div>
       </div>
@@ -312,73 +297,39 @@
 
 <!-- Все услуги -->
 <section class="sec dark" id="uslugi" aria-labelledby="h-us">
-  <svg class="bg-win" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
   <div class="wrap">
     <div class="sec-head rv">
       <p class="kicker" data-i="us.k">Услуги</p>
-      <h2 id="h-us" data-i="us.h">Ремонт окон любой сложности: от ручки до стеклопакета</h2>
-      <p class="lead" data-i="us.l">Мастер приезжает с инструментом, осматривает окно и называет цену на месте.</p>
+      <h2 id="h-us" data-i="us.h">Сетки, швы, откосы, фурнитура и двери</h2>
+      <p class="lead" data-i="us.l">Мастер приезжает с инструментом и называет цену на месте, до начала работы.</p>
     </div>
-    <div class="cat rv">
-      <article class="card w6" id="moskitnye-setki">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-net"/></svg></span>
+    <ul class="cat rv">
+      <li class="row" id="moskitnye-setki">
         <h3 data-i="c.ms.h">Москитные сетки</h3>
         <p data-i="c.ms.p">Замеряем проём, изготавливаем сетку по размеру и ставим на крепления. На окна и балконные двери.</p>
-        <div class="card-cta">
-          <a class="btn btn-amber" href="https://wa.me/77004040187" data-wa="moskitnye-setki" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo">Отправить фото окна</span></a>
-        </div>
-      </article>
-      <article class="card w6" id="germetizaciya">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-seam"/></svg></span>
+        <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="moskitnye-setki" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo2">Фото в WhatsApp</span></a>
+      </li>
+      <li class="row" id="germetizaciya">
         <h3 data-i="c.gs.h">Герметизация швов</h3>
         <p data-i="c.gs.p">Заделываем монтажные швы между рамой и стеной и стыки откосов. Уходят сквозняк и промерзание по периметру.</p>
-        <div class="card-cta">
-          <a class="btn btn-amber" href="https://wa.me/77004040187" data-wa="germetizaciya" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo">Отправить фото окна</span></a>
-        </div>
-      </article>
-      <article class="card" id="otkosy">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-sill"/></svg></span>
+        <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="germetizaciya" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo2">Фото в WhatsApp</span></a>
+      </li>
+      <li class="row" id="otkosy">
         <h3 data-i="c.ot.h">Откосы и подоконники</h3>
         <p data-i="c.ot.p">Установка и замена откосов и подоконников после монтажа окна или ремонта.</p>
-        <div class="card-cta">
-          <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="otkosy" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.wa2">WhatsApp</span></a>
-        </div>
-      </article>
-      <article class="card" id="furnitura">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-fit"/></svg></span>
+        <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="otkosy" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo2">Фото в WhatsApp</span></a>
+      </li>
+      <li class="row" id="furnitura">
         <h3 data-i="c.fu.h">Ремонт фурнитуры</h3>
         <p data-i="c.fu.p">Ручки, петли, запорные механизмы: ремонт и замена, когда окно не закрывается или ручка заклинила.</p>
-        <div class="card-cta">
-          <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="furnitura" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.wa2">WhatsApp</span></a>
-        </div>
-      </article>
-      <article class="card" id="dveri">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-hex"/></svg></span>
+        <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="furnitura" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo2">Фото в WhatsApp</span></a>
+      </li>
+      <li class="row" id="dveri">
         <h3 data-i="c.dv.h">Пластиковые двери</h3>
         <p data-i="c.dv.p">Регулировка, уплотнители и фурнитура балконных и входных пластиковых дверей.</p>
-        <div class="card-cta">
-          <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="dveri" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.wa2">WhatsApp</span></a>
-        </div>
-      </article>
-      <article class="card" id="regulirovka-k">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-hex"/></svg></span>
-        <h3 data-i="c.rg.h">Регулировка окон</h3>
-        <p data-i="c.rg.p">Провисание, перекос, прижим на зиму и лето.</p>
-        <div class="card-cta"><a class="btn btn-ghost-l" href="#regulirovka"><span data-i="c.more">Подробнее</span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a></div>
-      </article>
-      <article class="card" id="uplotniteli-k">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-seal"/></svg></span>
-        <h3 data-i="c.up.h">Уплотнители</h3>
-        <p data-i="c.up.p">Новый контур по периметру створки и рамы.</p>
-        <div class="card-cta"><a class="btn btn-ghost-l" href="#uplotniteli"><span data-i="c.more">Подробнее</span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a></div>
-      </article>
-      <article class="card" id="steklopakety-k">
-        <span class="card-ico"><svg aria-hidden="true"><use href="#ic-glass"/></svg></span>
-        <h3 data-i="c.st.h">Стеклопакеты</h3>
-        <p data-i="c.st.p">Замер, изготовление и замена в ту же раму.</p>
-        <div class="card-cta"><a class="btn btn-ghost-l" href="#steklopakety"><span data-i="c.more">Подробнее</span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a></div>
-      </article>
-    </div>
+        <a class="btn btn-ghost-l" href="https://wa.me/77004040187" data-wa="dveri" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="btn.photo2">Фото в WhatsApp</span></a>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -388,16 +339,14 @@
     <div class="sash">
       <div class="sash-3d">
         <figure class="ph has-img">
-          <img src="assets/master.webp" alt="Ящик мастера с инструментом для ремонта окон" data-i-alt="alt.ab" width="1600" height="1067" loading="lazy" decoding="async">
-          <div class="stub"><span data-i="stub.l">Фото</span><strong data-i="stub.ab">Мастер на выезде</strong></div>
+          <img src="assets/master.webp?v=20261102-3" alt="Мастер на выезде у окна в квартире" data-i-alt="alt.ab" width="1200" height="1600" loading="lazy" decoding="async">
         </figure>
       </div>
     </div>
     <div class="about-scrim" aria-hidden="true"></div>
     <div class="about-in txt">
-      <p class="kicker" data-i="ab.k">О нас</p>
-      <h2 id="h-ab" data-i="ab.h">18 лет чиним окна в Астане</h2>
-      <p class="lead" data-i="ab.l">Офиса нет: мастер приезжает к вам по всему городу и пригороду. Главное, чтобы поступил звонок.</p>
+      <h2 id="h-ab" data-i="ab.h">18&nbsp;лет чиним окна в&nbsp;Астане</h2>
+      <p class="lead" data-i="ab.l">Офиса нет: мастер сам приезжает по всему городу и пригороду. Звоните в любой день, приедем в удобное время.</p>
       <ul class="facts">
         <li><strong data-i="ab.f1">18 лет</strong><span data-i="ab.f1t">опыта в ремонте пластиковых окон</span></li>
         <li><strong data-i="ab.f2">1 год</strong><span data-i="ab.f2t">гарантии на выполненные работы</span></li>
@@ -415,8 +364,7 @@
 <section class="sec" id="kak-rabotaem" aria-labelledby="h-kr">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="kicker" data-i="kr.k">Как работаем</p>
-      <h2 id="h-kr" data-i="kr.h">Четыре шага от звонка до закрытого окна</h2>
+      <h2 id="h-kr" data-i="kr.h">Четыре шага от&nbsp;звонка до&nbsp;закрытого окна</h2>
     </div>
     <ol class="steps rv">
       <li class="step"><span class="step-n">01</span><h3 data-i="kr.1">Заявка</h3><p data-i="kr.1t">Напишите в WhatsApp или позвоните. Можно сразу отправить фото окна.</p></li>
@@ -432,7 +380,6 @@
   <div class="wrap">
     <div class="faq">
       <div class="faq-aside rv">
-        <p class="kicker" data-i="fq.k">Вопросы</p>
         <h2 id="h-fq" data-i="fq.h">Что спрашивают перед вызовом</h2>
         <a class="btn btn-dark" href="https://wa.me/77004040187" data-wa="voprosy" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="fq.b">Задать свой вопрос</span></a>
       </div>
@@ -463,13 +410,12 @@
 </section>
 
 <!-- Заявка -->
-<section class="sec form-sec" id="zayavka" aria-labelledby="h-za">
-  <svg class="bg-win" viewBox="0 0 200 200" aria-hidden="true"><rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><rect x="22" y="22" width="156" height="156" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M100 22v156" stroke="currentColor" stroke-width="6"/></svg>
+<section class="sec dark form-sec" id="zayavka" aria-labelledby="h-za">
   <div class="wrap">
     <div class="form-grid">
       <div class="rv">
         <p class="kicker" data-i="za.k">Заявка</p>
-        <h2 id="h-za" data-i="za.h">Мастер приедет и рассчитает на месте</h2>
+        <h2 id="h-za" data-i="za.h">Мастер приедет и&nbsp;рассчитает на&nbsp;месте</h2>
         <p class="lead" data-i="za.l">Оставьте имя и телефон. Заявка откроет WhatsApp с готовым сообщением, туда же можно приложить фото окна.</p>
         <div class="photo-hint"><svg aria-hidden="true"><use href="#ic-cam"/></svg><span data-i="za.hint">Фото окна помогает мастеру понять задачу ещё до выезда.</span></div>
       </div>
@@ -522,6 +468,7 @@
   <footer class="foot">
     <div class="wrap foot-in">
       <span class="brand"><span class="brand-tbm">TBM</span><span class="brand-rest">Plast Service</span></span>
+      <a class="foot-tel" href="tel:+77004040187">+7 700 404 01 87</a>
       <p class="foot-copy">© <span id="year">2026</span> <span data-i="ft.c">TBM Plast Service, Астана. ИИН 930304402198</span></p>
     </div>
   </footer>
@@ -534,6 +481,6 @@
   <a href="https://wa.me/77004040187" data-wa="sticky" target="_blank" rel="noopener" class="sk-wa"><svg width="18" height="18" aria-hidden="true"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
 </nav>
 
-<script src="script.js?v=20261021-2" defer></script>
+<script src="script.js?v=20261102-4" defer></script>
 </body>
 </html>
