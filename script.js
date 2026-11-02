@@ -201,6 +201,40 @@
   }
 
   
+  /* ---------- Схема окна: симптом подсвечивает деталь ---------- */
+  (function () {
+    var fig = doc.getElementById("win-diag");
+    if (!fig) return;
+    var cap = doc.getElementById("diag-cap");
+    var cards = [].slice.call(doc.querySelectorAll(".sym[data-part]"));
+    var parts = [].slice.call(fig.querySelectorAll(".part"));
+    var idx = 0, timer = null, held = false, seen = false;
+    function show(card) {
+      var key = card.getAttribute("data-part");
+      parts.forEach(function (g) { g.classList.toggle("on", g.getAttribute("data-part") === key); });
+      cards.forEach(function (c) { c.classList.toggle("on", c === card); });
+      var t = card.querySelector(".sym-to span");
+      if (cap && t) cap.textContent = t.textContent;
+    }
+    function step() { if (held) return; show(cards[idx % cards.length]); idx++; }
+    function run() { if (timer || REDUCED) return; step(); timer = setInterval(step, 2600); }
+    function stop() { clearInterval(timer); timer = null; }
+    cards.forEach(function (c, i) {
+      c.addEventListener("mouseenter", function () { held = true; idx = i + 1; show(c); });
+      c.addEventListener("focus", function () { held = true; idx = i + 1; show(c); });
+      c.addEventListener("mouseleave", function () { held = false; });
+      c.addEventListener("blur", function () { held = false; });
+    });
+    if ("IntersectionObserver" in W) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) { if (!seen) { seen = true; show(cards[0]); idx = 1; } run(); } else stop();
+        });
+      }, { threshold: 0.35 }).observe(fig);
+    } else { show(cards[0]); }
+    doc.addEventListener("langchange", function () { var a = doc.querySelector(".sym.on"); if (a) show(a); });
+  })();
+
   /* ---------- Язык: RU в разметке, KZ подгружается отдельным файлом ---------- */
   var I18N = { ru: {} };
   var RU = I18N.ru;
@@ -234,6 +268,7 @@
     try { localStorage.setItem("tbm-lang", lang); } catch (e) {}
     fitText();
     measureHero();
+    try { doc.dispatchEvent(new Event("langchange")); } catch (e) {}
   }
   function loadLang(lang, done) {
     if (I18N[lang] || lang !== "kk") return done();
