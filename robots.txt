@@ -9,4 +9,4 @@ Allow: /
 Disallow: /assets/lang/
 Disallow: /*lang=kk
 
-Sitemap: https://songokura.github.io/tbmplast/sitemap.xml
+Sitemap: https://tbm-plast.kz/sitemap.xml
