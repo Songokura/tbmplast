@@ -45,6 +45,20 @@
     a.setAttribute("href", "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(text));
   }, true);
 
+  /* ---------- Конверсии Google Ads: звонок, WhatsApp и почта, отправка формы ---------- */
+  function conv(key) {
+    var id = (W.TBM_CONV || {})[key];
+    if (!id || typeof W.gtag !== "function") return;
+    W.gtag("event", "conversion", { send_to: id, value: 1.0, currency: "USD", transport_type: "beacon" });
+  }
+  doc.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (h.indexOf("tel:") === 0) conv("phone");
+    else if (h.indexOf("https://wa.me/") === 0 || h.indexOf("mailto:") === 0) conv("contact");
+  });
+
   /* ---------- fitText для заголовка героя: ни одно слово не шире контейнера ---------- */
   var h1 = doc.getElementById("h1");
   function fitText() {
@@ -323,6 +337,7 @@
       var lines = [L.head, L.name + ": " + name, L.phone + ": " + phone];
       if (f.message.value.trim()) lines.push(L.msg + ": " + f.message.value.trim());
       var url = "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(lines.join("\n"));
+      conv("lead");
       W.open(url, "_blank", "noopener");
       form.hidden = true;
       if (thanks) { thanks.hidden = false; try { thanks.focus({ preventScroll: true }); } catch (err) {} }
